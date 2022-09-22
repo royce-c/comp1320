@@ -28,5 +28,3 @@ const day = readline.question("Enter a day:  ");
 console.log(getDayOfTheWeek(month, day, year));
 
 
-//const answer = readline.question("enter date: ")
-//console.log("You answered :" + answer)

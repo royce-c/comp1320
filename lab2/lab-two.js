@@ -1,5 +1,3 @@
-//module.exports = {isLeapYear, getMonthCode, convertDayOfTheWeekNumber, getDayOfTheWeek, makeCalendar};
-
 const isLeapYear = (year) => {
   if (year % 4 != 0) {
     return false;
@@ -42,9 +40,6 @@ const getMonthCode = (month, year) => {
     monthCode = monthCode + 2;
   }
 
-  //console.log(firstTwoDigits)
-  //console.log(monthCode)
-
   return monthCode;
 };
 
@@ -84,8 +79,6 @@ const getDayOfTheWeek = (month, day, year) => {
   return convertDayOfTheWeekNumber(dayOfTheWeekNumber);
 };
 
-//console.log(getDayOfTheWeek("February", 16, 1789));
-
 const makeCalendar = (year) => {
   const monthChart = [
     "January",
@@ -109,12 +102,8 @@ const makeCalendar = (year) => {
   if (isLeapYear(year)) {
     daysInMonthList[1] = 29;
   }
-  //console.log(daysInMonthList)
 
   for (month of monthsList) {
-    //console.log("Month: " + month)
-    //console.log(daysInMonthList[month - 1])
-
     let day = 1;
 
     while (day <= daysInMonthList[month - 1]) {
@@ -133,12 +122,7 @@ const makeCalendar = (year) => {
   }
 };
 
-//makeCalendar(2019);
-
 module.exports = {
-  //isLeapYear,
-  //getMonthCode,
-  //convertDayOfTheWeekNumber,
   getDayOfTheWeek,
   makeCalendar,
 };
